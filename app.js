@@ -21,7 +21,7 @@ app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
 
 // 控制台打印日志
-//app.use(logger('dev'));
+app.use(logger('dev'));
 // 解析 post 请求
 app.use(bodyParser.json());
 // 加载用于解析 cookie 的中间件
