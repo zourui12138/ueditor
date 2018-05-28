@@ -9,6 +9,7 @@ import logger from 'morgan'
 import bodyParser from 'body-parser'
 
 // 路由路径
+import indexRouter from './routes/index'
 import ueditorRouter from './routes/ueditor'
 
 const app = express();
@@ -28,6 +29,7 @@ app.use(cookieParser());
 // 调用express.static中间件，指定静态资源目录
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', indexRouter);
 app.use('/ueditor/ue', ueditorRouter);
 
 // catch 404 and forward to error handler
