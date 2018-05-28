@@ -31,7 +31,7 @@ router.use("/",ueditor(path.join(process.cwd(),'public'),function (req,res,next)
     else{
         // console.log('config.json')
         res.setHeader('Content-Type','application/json');
-        res.redirect('/ueditor/nodejs/config.json');
+        res.redirect('/static/ueditor/nodejs/config.json');
     }
 }));
 module.exports = router;
